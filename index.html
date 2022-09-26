@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clockworks</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,800;1,200&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Clockworks</h1>
+      <section class="main-work">
+        <section id="controls">
+          <div class="input-group">
+            <label for="hours-input">Hours</label>
+            <input
+              type="number"
+              placeholder="0"
+              id="hours-input"
+              max="23"
+              min="0"
+            />
+          </div>
+          <div class="input-group">
+            <label for="minutes-input">Minutes</label>
+            <input
+              type="number"
+              placeholder="0"
+              id="minutes-input"
+              max="59"
+              min="0"
+            />
+          </div>
+          <div class="input-group">
+            <label for="seconds-input">Seconds</label>
+            <input
+              type="number"
+              placeholder="0"
+              id="seconds-input"
+              max="59"
+              min="0"
+              step="5"
+            />
+          </div>
+          <section class="buttons">
+            <button type="button" id="start-button" onclick="startTimer()">
+              Start
+            </button>
+            <button type="button" id="stop-button" onclick="stopTimer()" disabled>
+              Stop
+            </button>
+            <button
+              type="button"
+              id="pause-button"
+              onclick="pauseTimer()"
+              disabled
+            >
+              Pause
+            </button>
+          </section>
+        </section>
+        <h2>
+          <span id="hours">00</span>:<span id="minutes">00</span>:<span
+            id="seconds"
+            >00</span
+          >
+        </h2>
+      </section>
+    </div>
+    <script src="jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
